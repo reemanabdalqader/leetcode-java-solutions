@@ -2,6 +2,25 @@
 
 class Solution {
     public int removeDuplicates(int[] nums) {
+       Set <Integer > set =new LinkedHashSet <>();
+       int n = nums.length ;
+       for (int i=0;i<n ;i++){
+        set.add(nums[i]);
+
+       } 
+       int count =set.size();
+       int index =0;
+      for (int a :set ){
+        nums[index ]=a ;
+        index++ ;
+
+      }
+      return count ;
+    }
+}
+
+class Solution {
+    public int removeDuplicates(int[] nums) {
         int count = 1;
         int last = nums[0];
         int index = 1;
