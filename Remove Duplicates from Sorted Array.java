@@ -20,6 +20,23 @@ class Solution {
 }
 
 class Solution {
+    public int removeDuplicates(int[] arr) {
+        int i=0;
+      int n =  arr.length ;
+      int j=1;
+        while (j<n){
+            if (arr[i]!=arr[j]){
+                i++;
+                arr[i]=arr[j];
+            }
+            j++;
+        }
+        return i+1;
+    }
+}
+
+
+class Solution {
     public int removeDuplicates(int[] nums) {
         int count = 1;
         int last = nums[0];
